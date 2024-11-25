@@ -28,10 +28,22 @@
       "descricao" => "Meu primeiro portfólio. Escrito em PHP e HTML."
     ],
     [
-      "titulo" => "Lista de tarefas",
+      "titulo" => "Lista de tarefas", 
       "finalizado" => false,
       "data" => "2024-05-25",
-      "descricao" => "Lista de tarefas Escrito em PHP e HTML."
+      "descricao" => "Lista de tarefas. Escrito em PHP e HTML."
+    ],
+    [
+      "titulo" => "Controle de leitura de livros", 
+      "finalizado" => true,
+      "data" => "2024-05-25",
+      "descricao" => "Lista de livros. Escrito em PHP e HTML."
+    ],
+    [
+      "titulo" => "Projeto em andamento", 
+      "finalizado" => false,
+      "data" => "2025-05-25",
+      "descricao" => "Projeto em andamento. Escrito em PHP e HTML."
     ],
   ];
 
@@ -43,7 +55,20 @@
     
     return '<span style="color: red;"> 🚫 não finalizado </span>';
     
-  }
+  };
+
+
+  function filtrarProjetosFinalizados($listaDeProjetos) {
+    $filtrados = [];
+
+    foreach($listaDeProjetos as $projeto) {
+      if($projeto['finalizado']) {
+        $filtrados [] = $projeto;
+      }
+    }
+
+    return $filtrados;
+  };
 
 
   ?>
@@ -59,11 +84,14 @@
   <hr>
 
   <ul>
-    <?php foreach ($projetos as $projeto): ?>
+    <?php foreach (filtrarProjetosFinalizados($projetos) as $projeto): ?>
+
       <div
         <?php if (! ((2024 - $ano) > 2)): ?>
         style="background-color: burlywood;"
-        <?php endif; ?>>
+        <?php endif; ?>
+      >
+
         <h2><?=$projeto['titulo']?></h2>
         <p><?= $projeto['descricao'] ?></p>
 

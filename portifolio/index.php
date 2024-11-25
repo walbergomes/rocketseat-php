@@ -38,10 +38,11 @@
 
   function verificarSeEstaFinalizado( $projeto ) {
     if ( $projeto['finalizado'] ) {
-      echo '<span style="color: green;"> ✅ finalizado </span>';
-    } else {    
-      echo '<span style="color: red;"> 🚫 não finalizado </span>';
-    }
+      return '<span style="color: green;"> ✅ finalizado </span>';
+    } 
+    
+    return '<span style="color: red;"> 🚫 não finalizado </span>';
+    
   }
 
 
@@ -71,7 +72,7 @@
           <div>
             Projeto:
 
-            <?php verificarSeEstaFinalizado($projeto); ?>
+            <?= verificarSeEstaFinalizado($projeto) ?>
 
             <!-- <?php if ($projeto['finalizado']): ?>
               <span style="color: green;"> ✅ finalizado </span>

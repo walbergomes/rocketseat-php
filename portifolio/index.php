@@ -14,9 +14,10 @@
     $ano = 2024;
   ?>
 
-  <h1><?php echo $titulo?></h1>
+  <h1><?php echo $titulo; ?></h1>
 
-  <!-- Pode ser escrito assim também - é a mesma coisa que usar echo, só é mais curto-->
+  <!-- Pode ser escrito assim também - é a mesma coisa que usar echo, só é mais curto -->
+  <!-- Nessa versão, o ";" não é obrigatório -->
   <p><?=$subtitulo?> </p>
   <p><?=$ano?> </p>
 </body>

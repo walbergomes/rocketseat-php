@@ -16,7 +16,14 @@
     $projeto = "Meu portifólio";
     $finalizado = true;
     $dataDoProjeto = "2024-11-25";
-    $descricao = "Meu primeiro portifólio em PHP e HTML"
+    $descricao = "Meu primeiro portifólio em PHP e HTML";
+
+    $projetos = [
+      "Meu portifólio", 
+      "Lista de Tarefas",
+      "Controle de leitura de livros",
+      "mais um projeto",
+    ];
   ?>
 
   <h1><?php echo $titulo; ?></h1>
@@ -29,7 +36,35 @@
 
   <hr>
 
-  <div 
+  <ul>
+    <?php foreach($projetos as $projeto) {
+      echo "<li>{$projeto}º</li>";
+    }
+
+
+    ?>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div 
     <?php if( ! ((2024 - $ano) > 2) ): ?>
       style="background-color: burlywood;"
     <?php endif; ?>
@@ -51,6 +86,6 @@
 
       </div>
     </div>
-  </div>
+  </div> -->
 </body>
 </html> 

@@ -11,21 +11,21 @@
   <?php
   $name = "Walber";
   $saudacao = "Oi, ";
-  $titulo = $saudacao . "Esse é o portifólio do " .  $name;
-  $subtitulo = "Seja bem vindo ao meu portifólio";
+  $titulo = $saudacao . "Esse é o portfólio do " .  $name;
+  $subtitulo = "Seja bem vindo ao meu portfólio";
   $ano = 2024;
 
-  $projeto = "Meu portifólio";
+  $projeto = "Meu portfólio";
   $finalizado = true;
   $dataDoProjeto = "2024-11-25";
-  $descricao = "Meu primeiro portifólio em PHP e HTML";
+  $descricao = "Meu primeiro portfólio em PHP e HTML";
 
   $projetos = [
     [
-      "titulo" => "Meu portifólio",
+      "titulo" => "Meu portfólio",
       "finalizado" => true,
       "data" => "2024-11-25",
-      "descricao" => "Meu primeiro portifólio. Escrito em PHP e HTML."
+      "descricao" => "Meu primeiro portfólio. Escrito em PHP e HTML."
     ],
     [
       "titulo" => "Lista de tarefas",

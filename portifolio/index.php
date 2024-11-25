@@ -34,6 +34,17 @@
       "descricao" => "Lista de tarefas Escrito em PHP e HTML."
     ],
   ];
+
+
+  function verificarSeEstaFinalizado( $projeto ) {
+    if ( $projeto['finalizado'] ) {
+      echo '<span style="color: green;"> ✅ finalizado </span>';
+    } else {    
+      echo '<span style="color: red;"> 🚫 não finalizado </span>';
+    }
+  }
+
+
   ?>
 
   <h1><?php echo $titulo; ?></h1>
@@ -60,11 +71,13 @@
           <div>
             Projeto:
 
-            <?php if ($projeto['finalizado']): ?>
+            <?php verificarSeEstaFinalizado($projeto); ?>
+
+            <!-- <?php if ($projeto['finalizado']): ?>
               <span style="color: green;"> ✅ finalizado </span>
             <?php else: ?>
               <span style="color: red;"> 🚫 não finalizado </span>
-            <?php endif ?>
+            <?php endif ?> -->
 
           </div>
         </div>

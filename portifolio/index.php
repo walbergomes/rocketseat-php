@@ -12,6 +12,11 @@
     $titulo = $saudacao . "Esse é o portifólio do " .  $name;
     $subtitulo = "Seja bem vindo ao meu portifólio";
     $ano = 2024;
+
+    $projeto = "Meu portifólio";
+    $finalizado = true;
+    $dataDoProjeto = "2024-11-25";
+    $descricao = "Meu primeiro portifólio em PHP e HTML"
   ?>
 
   <h1><?php echo $titulo; ?></h1>
@@ -20,5 +25,28 @@
   <!-- Nessa versão, o ";" não é obrigatório -->
   <p><?=$subtitulo?> </p>
   <p><?=$ano?> </p>
+
+
+  <hr>
+
+  <div>
+    <h2><?=$projeto?></h2>
+    <p><?=$descricao?></p>
+
+    <div>
+      <div><?=$dataDoProjeto?></div>
+      <div>
+
+        <?php 
+          if( $finalizado ) {
+            echo "✅";
+          } else {
+            echo "🚫";
+          }
+        ?>
+        
+      </div>
+    </div>
+  </div>
 </body>
-</html>
+</html> 

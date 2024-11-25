@@ -29,7 +29,12 @@
 
   <hr>
 
-  <div>
+  <div 
+    <?php if( ! ((2024 - $ano) > 2) ): ?>
+      style="background-color: burlywood;"
+    <?php endif; ?>
+
+  >
     <h2><?=$projeto?></h2>
     <p><?=$descricao?></p>
 

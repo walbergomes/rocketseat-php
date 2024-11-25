@@ -35,16 +35,15 @@
 
     <div>
       <div><?=$dataDoProjeto?></div>
-      <div>
+      <div> 
+        Projeto: 
 
-        <?php 
-          if( $finalizado ) {
-            echo "✅";
-          } else {
-            echo "🚫";
-          }
-        ?>
-        
+        <?php  if($finalizado): ?> 
+          <span style="color: green;"> ✅ finalizado </span>
+        <?php else: ?> 
+          <span style="color: red;"> 🚫 não finalizado </span>
+        <?php endif ?>
+
       </div>
     </div>
   </div>

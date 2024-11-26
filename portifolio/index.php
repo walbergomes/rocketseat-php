@@ -58,7 +58,7 @@
   };
 
 
-  function filtrarProjetos($listaDeProjetos, $finalizado = null) {
+  $filtrarProjetos = function ($listaDeProjetos, $finalizado = null) {
 
     if(is_null($finalizado)) {
       return $listaDeProjetos;
@@ -78,6 +78,11 @@
   };
 
 
+  $projetosFiltrados = $filtrarProjetos($projetos, false);
+
+
+
+
   ?>
 
   <h1><?php echo $titulo; ?></h1>
@@ -91,7 +96,7 @@
   <hr>
 
   <ul>
-    <?php foreach (filtrarProjetos($projetos, null) as $projeto): ?>
+    <?php foreach ($projetosFiltrados as $projeto): ?>
 
       <div
         <?php if (! ((2024 - $ano) > 2)): ?>

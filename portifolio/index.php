@@ -47,6 +47,11 @@
     ],
   ];
 
+  $livros = [
+    ['nome' => 'Senhor dos Anéis'],
+    ['nome' => 'Harry Potter'],
+  ];
+
 
   function verificarSeEstaFinalizado( $projeto ) {
     if ( $projeto['finalizado'] ) {
@@ -58,7 +63,7 @@
   };
 
 
-  function filtrarProjetos ($itens, $chave, $valor) {
+  function filtro ($itens, $chave, $valor) {
 
     $filtrados = [];
 
@@ -74,8 +79,8 @@
   };
 
 
-  $projetosFiltrados = filtrarProjetos($projetos, "ano", 2024);
-  $projetosFiltrados = filtrarProjetos($projetos, "finalizado", true);
+  $projetosFiltrados = filtro($projetos, "ano", 2024);
+  $projetosFiltrados = filtro($projetos, "finalizado", true);
 
 
   ?>
@@ -86,6 +91,28 @@
   <!-- Nessa versão, o ";" não é obrigatório -->
   <p><?= $subtitulo ?> </p>
   <p><?= $ano ?> </p>
+
+
+  <hr>
+
+
+  <ul>
+    
+
+    <?php 
+     // foreach(filtro($livros, 'nome', 'Harry Potter') as $livro) {
+       // echo "<li>" . $livro['nome'] . "</li>";
+      //};
+    ?> 
+  
+
+    <?php foreach(filtro($livros, 'nome', 'Harry Potter') as $livro): ?>
+      <li> <?= $livro['nome'] ?> </li>
+    <?php endforeach; ?>
+
+
+
+  </ul>
 
 
   <hr>

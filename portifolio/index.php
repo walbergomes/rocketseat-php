@@ -24,13 +24,13 @@
     [
       "titulo" => "Meu portfólio",
       "finalizado" => true,
-      "ano" => 2024,
+      "ano" => 2021,
       "descricao" => "Meu primeiro portfólio. Escrito em PHP e HTML."
     ],
     [
       "titulo" => "Lista de tarefas", 
       "finalizado" => false,
-      "ano" => 2024,
+      "ano" => 2023,
       "descricao" => "Lista de tarefas. Escrito em PHP e HTML."
     ],
     [
@@ -47,12 +47,6 @@
     ],
   ];
 
-  $livros = [
-    ['nome' => 'Senhor dos Anéis'],
-    ['nome' => 'Harry Potter'],
-  ];
-
-
   function verificarSeEstaFinalizado( $projeto ) {
     if ( $projeto['finalizado'] ) {
       return '<span style="color: green;"> ✅ finalizado </span>';
@@ -63,13 +57,13 @@
   };
 
 
-  function filtro ($itens, $chave, $valor) {
+  function filtro ($itens, $funcao) {
 
     $filtrados = [];
 
     foreach($itens as $item) {
 
-      if( $item[$chave] === $valor ) {
+      if($funcao($item)) {
         $filtrados [] = $item;
       }
 
@@ -79,8 +73,9 @@
   };
 
 
-  $projetosFiltrados = filtro($projetos, "ano", 2024);
-  $projetosFiltrados = filtro($projetos, "finalizado", true);
+  $projetosFiltrados = filtro($projetos,function($projeto) {
+    return $projeto['ano'] === 2024  || $projeto['ano'] === 2021;
+  });
 
 
   ?>
@@ -91,28 +86,6 @@
   <!-- Nessa versão, o ";" não é obrigatório -->
   <p><?= $subtitulo ?> </p>
   <p><?= $ano ?> </p>
-
-
-  <hr>
-
-
-  <ul>
-    
-
-    <?php 
-     // foreach(filtro($livros, 'nome', 'Harry Potter') as $livro) {
-       // echo "<li>" . $livro['nome'] . "</li>";
-      //};
-    ?> 
-  
-
-    <?php foreach(filtro($livros, 'nome', 'Harry Potter') as $livro): ?>
-      <li> <?= $livro['nome'] ?> </li>
-    <?php endforeach; ?>
-
-
-
-  </ul>
 
 
   <hr>

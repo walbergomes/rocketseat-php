@@ -24,25 +24,25 @@
     [
       "titulo" => "Meu portfólio",
       "finalizado" => true,
-      "data" => "2024-11-25",
+      "ano" => 2024,
       "descricao" => "Meu primeiro portfólio. Escrito em PHP e HTML."
     ],
     [
       "titulo" => "Lista de tarefas", 
       "finalizado" => false,
-      "data" => "2024-05-25",
+      "ano" => 2024,
       "descricao" => "Lista de tarefas. Escrito em PHP e HTML."
     ],
     [
       "titulo" => "Controle de leitura de livros", 
       "finalizado" => true,
-      "data" => "2024-05-25",
+      "ano" => 2024,
       "descricao" => "Lista de livros. Escrito em PHP e HTML."
     ],
     [
       "titulo" => "Projeto em andamento", 
       "finalizado" => false,
-      "data" => "2025-05-25",
+      "ano" => 2025,
       "descricao" => "Projeto em andamento. Escrito em PHP e HTML."
     ],
   ];
@@ -58,18 +58,14 @@
   };
 
 
-  $filtrarProjetos = function ($listaDeProjetos, $finalizado = null) {
-
-    if(is_null($finalizado)) {
-      return $listaDeProjetos;
-    }
+  function filtrarProjetos ($itens, $chave, $valor) {
 
     $filtrados = [];
 
-    foreach($listaDeProjetos as $projeto) {
+    foreach($itens as $item) {
 
-      if( $projeto['finalizado'] === $finalizado ) {
-        $filtrados [] = $projeto;
+      if( $item[$chave] === $valor ) {
+        $filtrados [] = $item;
       }
 
     }
@@ -78,9 +74,8 @@
   };
 
 
-  $projetosFiltrados = $filtrarProjetos($projetos, false);
-
-
+  $projetosFiltrados = filtrarProjetos($projetos, "ano", 2024);
+  $projetosFiltrados = filtrarProjetos($projetos, "finalizado", true);
 
 
   ?>
@@ -108,7 +103,7 @@
         <p><?= $projeto['descricao'] ?></p>
 
         <div>
-          <div><?=$projeto['data'] ?></div>
+          <div><?=$projeto['ano'] ?></div>
           <div>
             Projeto:
 

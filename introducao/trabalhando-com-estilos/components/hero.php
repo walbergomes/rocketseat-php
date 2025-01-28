@@ -1,3 +1,13 @@
+<?php
+$itens = [
+  ["href" => "", "src" => "assets/twitter.png", "alt" => "Twitter logo"],
+  ["href" => "", "src" => "assets/facebook.png", "alt" => "Facebook logo"],
+  ["href" => "", "src" => "assets/linkedin.png", "alt" => "LinkedIn logo"],
+  ["href" => "", "src" => "assets/youtube.png", "alt" => "Youtube logo"],
+]
+?>
+
+
 <section class="flex gap-x-3">
   <!-- Título e Descrição -->
   <div class="w-2/3">
@@ -7,18 +17,15 @@
     </p>
 
     <ul class="flex gap-x-3 mt-3">
-      <li><a href="">
-          <img class="h-8 hover:animate-bounce" src="assets/twitter.png" alt="Twitter logo">
-        </a></li>
-      <li><a href="">
-          <img class="h-8 hover:animate-bounce" src="assets/facebook.png" alt="Facebook logo">
-        </a></li>
-      <li><a href="">
-          <img class="h-8 hover:animate-bounce" src="assets/linkedin.png" alt="LinkedIn logo">
-        </a></li>
-      <li><a href="">
-          <img class="h-8 hover:animate-bounce" src="assets/youtube.png" alt="Youtube logo">
-        </a></li>
+      
+      <?php foreach ($itens as $item) : ?>
+        <li>
+          <a href="<?= $item["href"] ?>" target="_blank">
+            <img class="h-8 hover:animate-bounce" src="<?=$item["src"]?>" alt="<?=$item["alt"]?>">
+          </a>
+        </li>
+
+      <?php endforeach; ?>
     </ul>
   </div>
 

@@ -1,3 +1,13 @@
+<?php
+  $technologies = [
+    ["title" => "Github"],
+    ["title" => "PHP"],
+    ["title" => "CSS"],
+    ["title" => "HTML"],
+    ["title" => "JavaScript"],
+  ];
+?>
+
 <header class="flex flex-col items-center pt-40">
   <div class="size-fit p-1 rounded-full border-[3px] border-red-400">
     <img src="assets/avatar.png" alt="" class="" />
@@ -15,15 +25,17 @@
   </p>
 
   <div class="mt-15">
-    <span
-      class="bg-emerald-500 px-3 py-1 border-[2px] rounded-3xl text-base text-bg-900">Github</span>
-    <span
-      class="bg-fuchsia-500 px-3 py-1 border-[2px] rounded-3xl text-base text-bg-900">PHP</span>
-    <span
-      class="bg-rose-500 px-3 py-1 border-[2px] rounded-3xl text-base text-bg-900">CSS</span>
-    <span
-      class="bg-sky-500 px-3 py-1 border-[2px] rounded-3xl text-base text-bg-900">HTML</span>
-    <span
-      class="bg-yellow-500 px-3 py-1 border-[2px] rounded-3xl text-base text-bg-900">JavaScript</span>
+    
+    <?php 
+      $colors = ['emerald', 'fuchsia', 'rose', 'sky', 'yellow'];
+      foreach($technologies as $position => $technology): 
+    ?>
+      <span
+        class="bg-<?=$colors[$position]?>-500 px-3 py-1 border-[2px] rounded-3xl text-base text-bg-900">
+
+        <?=$technology['title'] ?>
+      </span>
+    <?php endforeach; ?>
+    
   </div>
 </header>

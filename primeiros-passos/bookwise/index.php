@@ -31,14 +31,86 @@
         name="pesquisar">
       <button type="submit">🔎</button>
     </form>
-
-    <section class="space-y-4">
+    
+    <!-- lista de livros -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <!-- Livro -->
-      <div class="w-1/3 p-2 rounded border-stone-800 border-2 bg-stone-900">
+       
+      <div class="p-2 rounded border-stone-800 border-2 bg-stone-900">
         <div class="flex">
           <div class="w-1/3">Imagem</div>
           <div>
-            <div class="font-semibold">Titulo</div>
+            <a href="/livro.php" class="font-semibold hover:underline">Titulo</a>
+            <div class="text-xs italic">Autor</div>
+            <div class="text-xs italic">⭐⭐⭐⭐⭐ (3 Avaliações)</div>
+          </div>
+        </div>
+        <div class="text-sm">
+          Descrição
+        </div>
+      </div>
+
+      <div class="p-2 rounded border-stone-800 border-2 bg-stone-900">
+        <div class="flex">
+          <div class="w-1/3">Imagem</div>
+          <div>
+            <a href="/livro.php" class="font-semibold hover:underline">Titulo</a>
+            <div class="text-xs italic">Autor</div>
+            <div class="text-xs italic">⭐⭐⭐⭐⭐ (3 Avaliações)</div>
+          </div>
+        </div>
+        <div class="text-sm">
+          Descrição
+        </div>
+      </div>
+
+      <div class="p-2 rounded border-stone-800 border-2 bg-stone-900">
+        <div class="flex">
+          <div class="w-1/3">Imagem</div>
+          <div>
+            <a href="/livro.php" class="font-semibold hover:underline">Titulo</a>
+            <div class="text-xs italic">Autor</div>
+            <div class="text-xs italic">⭐⭐⭐⭐⭐ (3 Avaliações)</div>
+          </div>
+        </div>
+        <div class="text-sm">
+          Descrição
+        </div>
+      </div>
+
+      <div class="p-2 rounded border-stone-800 border-2 bg-stone-900">
+        <div class="flex">
+          <div class="w-1/3">Imagem</div>
+          <div>
+            <a href="/livro.php" class="font-semibold hover:underline">Titulo</a>
+            <div class="text-xs italic">Autor</div>
+            <div class="text-xs italic">⭐⭐⭐⭐⭐ (3 Avaliações)</div>
+          </div>
+        </div>
+        <div class="text-sm">
+          Descrição
+        </div>
+      </div>
+
+      <div class="p-2 rounded border-stone-800 border-2 bg-stone-900">
+        <div class="flex">
+          <div class="w-1/3">Imagem</div>
+          <div>
+            <a href="/livro.php" class="font-semibold hover:underline">Titulo</a>
+            <div class="text-xs italic">Autor</div>
+            <div class="text-xs italic">⭐⭐⭐⭐⭐ (3 Avaliações)</div>
+          </div>
+        </div>
+        <div class="text-sm">
+          Descrição
+        </div>
+      </div>
+
+      <div class="p-2 rounded border-stone-800 border-2 bg-stone-900">
+        <div class="flex">
+          <div class="w-1/3">Imagem</div>
+          <div>
+            <a href="/livro.php" class="font-semibold hover:underline">Titulo</a>
             <div class="text-xs italic">Autor</div>
             <div class="text-xs italic">⭐⭐⭐⭐⭐ (3 Avaliações)</div>
           </div>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BookWise</title>
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
+
 <body class="bg-stone-950 text-stone-200">
   <header class="bg-stone-900">
     <nav class="mx-auto max-w-screen-lg flex justify-between py-4">
@@ -22,17 +24,32 @@
 
   <main class="mx-auto max-w-screen-lg space-y-6">
     <form class="w-full flex space-x-2 mt-6">
-      <input 
-        type="text" 
+      <input
+        type="text"
         class="border-stone-800 border-2 rounded-md bg-stone-900 text-sm focus:outline-none px-2 py-1"
         placeholder="Pesquisar..."
-        name="pesquisar"
-      >
+        name="pesquisar">
       <button type="submit">🔎</button>
     </form>
-    <div>
-      Lista Final
-    </div>
+
+    <section class="space-y-4">
+      <!-- Livro -->
+      <div class="w-1/3 p-2 rounded border-stone-800 border-2 bg-stone-900">
+        <div class="flex">
+          <div class="w-1/3">Imagem</div>
+          <div>
+            <div class="font-semibold">Titulo</div>
+            <div class="text-xs italic">Autor</div>
+            <div class="text-xs italic">⭐⭐⭐⭐⭐ (3 Avaliações)</div>
+          </div>
+        </div>
+        <div class="text-sm">
+          Descrição
+        </div>
+      </div>
+
+    </section>
   </main>
 </body>
+
 </html>

@@ -1,6 +1,14 @@
 <?php
 
-class DB {
+class DB
+{
+
+    private $db;
+
+    public function __construct()
+    {
+        $this->db = new PDO('sqlite:database.sqlite');
+    }
 
     /**
      * Retorna todos os livros do banco de dados
@@ -9,24 +17,22 @@ class DB {
      * 
      */
 
-    public function livros () {
-        $db = new PDO('sqlite:database.sqlite');
-        $query = $db->query('select * from livros');
+    public function livros($id = null)
+    {
+        $query = $this->db->query("select * from livros");
         $itens = $query->fetchAll();
-        $retorno = [];
 
-        foreach ($itens as $item) {
-            $livro = new Livro();
+        return array_map(fn($item) => Livro::make($item), $itens);
+    }
 
-            $livro->id = $item["id"];
-            $livro->titulo = $item["titulo"];
-            $livro->autor = $item["autor"];
-            $livro->descricao = $item["descricao"];
+    public function  livro($id)
+    {
+        $sql = "select * from livros";
+        $sql .= " where id = " . $id;
 
-            $retorno [] = $livro;
-        }
-        
+        $query = $this->db->query($sql);
+        $itens = $query->fetchAll();
 
-        return $retorno;
+        return array_map(fn($item) => Livro::make($item), $itens)[0];
     }
 }

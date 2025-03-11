@@ -10,31 +10,16 @@ class DB
         $this->db = new PDO('sqlite:database.sqlite');
     }
 
-    /**
-     * Retorna todos os livros do banco de dados
-     * 
-     * @return array[Livro]
-     * 
-     */
-
-    public function livros($pesquisa = '')
+    public function query($query, $class = null, $params = [])
     {
-        
-        $prepare = $this->db->prepare("select * from livros where usuario_id = 1 and titulo like :pesquisa");
-        $prepare->bindValue('pesquisa', "%$pesquisa%");
-        $prepare->setFetchMode(PDO::FETCH_CLASS, Livro::class);
-        $prepare->execute();
+        $prepare = $this->db->prepare($query);
 
-        return $prepare->fetchAll();
+        if ($class) {
+            $prepare->setFetchMode(PDO::FETCH_CLASS, $class);
+        }
 
-    }
+        $prepare->execute($params);
 
-    public function  livro($id = '')
-    {
-        $prepare = $this->db->prepare("select * from livros where id = :id");
-        $prepare->bindValue('id', $id);
-        $prepare->execute();
-
-        return $prepare->fetch(PDO::FETCH_CLASS, Livro::class);
+        return $prepare;
     }
 }

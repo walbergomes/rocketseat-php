@@ -1,6 +1,5 @@
 <?php
 
-$mensagem = $_REQUEST['mensagem'] ?? '';
 require 'Validacao.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     'senha' => ['required']
   ], $_POST);
 
-  if($validacao->naoPassou()) {
+  if($validacao->naoPassou('login')) {
     header('location: /login');
     exit();
   }
@@ -29,10 +28,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($usuario) {
     // Se usuário existe, adicionamos ele na sessão
     $_SESSION['auth'] = $usuario;
-    $_SESSION['mensagem'] = 'Seja bem vindo ' . $usuario->nome . '!';
+
+    flash()->push('mensagem', 'Seja bem vindo ' . $usuario->nome . '!');
+
     header('location: /');
     exit();
   }
 }
 
-view('login', compact('mensagem'));
+view('login');

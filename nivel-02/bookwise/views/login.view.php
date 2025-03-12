@@ -3,6 +3,19 @@
     <h1 class="border-b border-stone-700 text-stone-400 font-bold px-4 py-2">Login</h1>
 
     <form class="p-4 space-y-4" method="post">
+      <?php if ($validacoes = flash()->get('validacoes_login')): ?>
+
+        <div class="border-red-800 bg-red-900 text-red-400 px-4 py-1 rounded-md border-2 text-sm font-bold">
+          <ul>
+            <li>Deu ruim</li>
+            <?php foreach ($validacoes as $validacao): ?>
+              <li><?= $validacao ?> </li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+
+      <?php endif; ?>
+
       <div class="flex flex-col">
         <label class="text-stone-400 mb-1">Email</label>
         <input
@@ -37,20 +50,13 @@
     <h1 class="border-b border-stone-700 text-stone-400 font-bold px-4 py-2">Registro</h1>
 
     <form class="p-4 space-y-4" method="POST" action="/registrar">
-      <?php if (isset($mensagem) && strlen($mensagem)): ?>
 
-        <div class="border-green-800 bg-green-900 text-green-400 px-4 py-1 rounded-md border-2 text-sm font-bold">
-          <?= $mensagem ?>
-        </div>
-
-      <?php endif; ?>
-
-      <?php if (isset($_SESSION['validacoes']) && sizeof($_SESSION['validacoes'])): ?>
+      <?php if ($validacoes = flash()->get('validacoes_registrar')): ?>
 
         <div class="border-red-800 bg-red-900 text-red-400 px-4 py-1 rounded-md border-2 text-sm font-bold">
           <ul>
             <li>Deu ruim</li>
-            <?php foreach ($_SESSION['validacoes'] as $validacao): ?>
+            <?php foreach ($validacoes as $validacao): ?>
               <li><?= $validacao ?> </li>
             <?php endforeach; ?>
           </ul>

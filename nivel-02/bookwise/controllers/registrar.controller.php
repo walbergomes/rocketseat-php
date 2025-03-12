@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   ], $_POST);
 
 
-  if ($validacao->naoPassou()) {
+  if ($validacao->naoPassou('registrar')) {
     header('location: /login');
     exit();
   } 
@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ]
   );
 
-  header('location: /login?mensagem=Registrado com sucesso!');
+  flash()->push('mensagem', 'Registrado com sucesso! 👍');
+  header('location: /login');
   exit();
 }

@@ -1,3 +1,16 @@
+<?php
+
+$sumNotas = array_reduce($avaliacoes, function ($carry, $a) {
+  return ($carry ?? 0) + $a->nota;
+}) ?? 0;
+
+$sumNotas = round($sumNotas / count($avaliacoes));
+
+$notaFinal = str_repeat('⭐', $sumNotas);
+
+?>
+
+
 <div class="p-2 rounded border-stone-800 border-2 bg-stone-900 mt-6">
   <div class="flex">
     <div class="w-1/3">Imagem</div>
@@ -6,7 +19,7 @@
         <?= $livro->titulo ?>
       </a>
       <div class="text-xs italic"><?= $livro->autor ?></div>
-      <div class="text-xs italic">⭐⭐⭐⭐⭐ (3 Avaliações)</div>
+      <div class="text-xs italic"><?= $notaFinal ?> (<?= count($avaliacoes) ?> Avaliações)</div>
     </div>
   </div>
   <div class="text-sm mt-2">
@@ -17,7 +30,20 @@
 
 <h2>Avaliações</h2>
 <div class="grid grid-cols-4 gap-4">
-  <div class="col-span-3">lista</div>
+  <div class="col-span-3 gap-4 grid">
+
+    <?php foreach ($avaliacoes as $avaliacao): ?>
+      <div class="border border-stone-700 rounded p-2">
+        <?= $avaliacao->avaliacao ?>
+
+        <?php $nota = str_repeat('⭐', $avaliacao->nota); ?>
+        <?= $nota ?>
+      </div>
+    <?php endforeach; ?>
+
+  </div>
+
+
   <?php if (auth()): ?>
 
     <div class="border border-stone-700 rounded">

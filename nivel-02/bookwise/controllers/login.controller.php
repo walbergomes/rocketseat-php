@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     'senha' => ['required']
   ], $_POST);
 
-  if($validacao->naoPassou('login')) {
+  if ($validacao->naoPassou('login')) {
     header('location: /login');
     exit();
   }
@@ -19,13 +19,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Consulta no banco de dados com email e senha
   $usuario = $database->query(
     query: "select * from usuarios
-              where email = :email
-              and senha = :senha",
+              where email = :email",
     class: Usuario::class,
-    params: compact('email', 'senha')
+    params: compact('email')
   )->fetch();
 
   if ($usuario) {
+
+    // validar senha
+    if (! password_verify($_POST['senha'], $usuario->senha) ) {
+      flash()->push("validacoes_login", ["Email ou senha incorretos!"]);
+      header('location: /login');
+      exit();
+    }
+
     // Se usuário existe, adicionamos ele na sessão
     $_SESSION['auth'] = $usuario;
 

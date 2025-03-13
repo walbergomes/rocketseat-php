@@ -19,7 +19,6 @@ class Validacao
                     $regra = $temp[0];
                     $regraAr = $temp[1];
                     $validacao->$regra($regraAr, $campo, $valorDoCampo);
-
                 } else {
 
                     $validacao->$regra($campo, $valorDoCampo);
@@ -28,6 +27,24 @@ class Validacao
         }
 
         return $validacao;
+    }
+
+    private function unique($tabela, $campo, $valor)
+    {
+        if (strlen($valor) == 0) {
+            return;
+        }
+
+        $db = new Database(config("database"));
+
+        $resultado = $db->query(
+            query: "select * from $tabela where $campo = :valor",
+            params: ['valor' => $valor]
+        )->fetch();
+
+        if($resultado) {
+            $this->validacoes[] = "O $campo já está sendo usado";
+        }
     }
 
     private function required($campo, $valor)
@@ -52,7 +69,7 @@ class Validacao
     }
 
     private function min($min, $campo, $valor)
-    {   
+    {
         if (strlen($valor) < $min) {
             $this->validacoes[] = "A $campo precisa ter no mínimo $min caracteres.";
         }
@@ -77,12 +94,12 @@ class Validacao
 
         $chave = 'validacoes';
 
-        if($nomeCustomizado) {
+        if ($nomeCustomizado) {
             $chave .= '_' . $nomeCustomizado;
         }
 
         flash()->push($chave, $this->validacoes);
-   
+
         return sizeof($this->validacoes) > 0;
     }
 }

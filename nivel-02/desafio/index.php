@@ -28,13 +28,28 @@
       <img src="assets/Image/Login.png" alt="" class="h-full w-full object-cover">
     </section>
 
-    <section class="flex-1 flex justify-center items-center">
+    <section class="flex-1 flex flex-col justify-center items-center">
+
+      <!-- SELECT FOR CHOOSE LOGIN OR REGISTER -->
+      <div
+        id="select-login-or-register"
+        class="w-[328px] h-[48px] bg-gray-200 flex p-1 rounded-[10px]">
+        <button
+          type="button"
+          class="flex justify-center items-center w-full h-full rounded-md bg-gray-300 text-purple-light font-nunito cursor-pointer">
+          Login
+        </button>
+        <button
+          type="button"
+          class="flex justify-center items-center w-full h-full rounded-md text-gray-500 font-nunito cursor-pointer">
+          Cadastro
+        </button>
+      </div>
 
       <!-- ----- LOGIN CARD ----- -->
-      <div id="card-login" class="flex flex-col w-[328px] hidden">
+      <div id="card-login" class="flex flex-col w-[328px] ">
 
-        <!-- SELECT FOR CHOOSE LOGIN OR REGISTER -->
-        <div
+        <!-- <div
           id="select-login-or-register"
           class="w-[328px] h-[48px] bg-gray-200 flex p-1 rounded-[10px]">
           <button
@@ -47,7 +62,7 @@
             class="flex justify-center items-center w-full h-full rounded-md text-gray-500 font-nunito cursor-pointer">
             Cadastro
           </button>
-        </div>
+        </div> -->
 
         <h1 class="font-rammeto text-2xl mt-[52px] mb-[20px]">Acesse sua conta</h1>
 
@@ -78,14 +93,14 @@
       </div>
 
       <!-- ----- REGISTER CARD ----- -->
-      <div id="card-register" class="flex flex-col w-[328px]">
+      <div id="card-register" class="flex flex-col w-[328px] hidden">
 
-        <div
+        <!-- <div
           id="select-login-or-register"
           class="w-[328px] h-[48px] bg-gray-200 flex p-1 rounded-[10px]">
           <span class="flex justify-center items-center w-full h-full rounded-md text-gray-500 font-nunito cursor-pointer">Login</span>
           <span class="flex justify-center items-center w-full h-full rounded-md bg-gray-300 text-purple-light  font-nunito cursor-pointer">Cadastro</span>
-        </div>
+        </div> -->
 
         <h1 class="font-rammeto text-2xl mt-[52px] mb-[20px]">Crie sua conta</h1>
 

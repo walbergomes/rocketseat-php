@@ -34,8 +34,8 @@
         <div
           id="select-login-or-register"
           class="w-[328px] h-[48px] bg-gray-200 flex p-1 rounded-[10px]">
-          <span class="flex justify-center items-center w-full h-full rounded-md bg-gray-300 text-purple-light font-nunito cursor-pointer">Login</span>
-          <span class="flex justify-center items-center w-full h-full rounded-md text-gray-500 font-nunito cursor-pointer">Cadastro</span>
+          <button type="button" class="flex justify-center items-center w-full h-full rounded-md bg-gray-300 text-purple-light font-nunito cursor-pointer">Login</button>
+          <button type="button" class="flex justify-center items-center w-full h-full rounded-md text-gray-500 font-nunito cursor-pointer">Cadastro</button>
         </div>
 
         <h1 class="font-rammeto text-2xl mt-[52px] mb-[20px]">Acesse sua conta</h1>
@@ -50,7 +50,7 @@
             <input type="password" placeholder="Senha" class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
           </div>
 
-          <button class="w-full h-[48px] bg-purple-base rounded-md font-nunito mt-5">Entrar</button>
+          <button type="button" class="w-full h-[48px] bg-purple-base rounded-md font-nunito mt-5">Entrar</button>
         </form>
       </div>
 

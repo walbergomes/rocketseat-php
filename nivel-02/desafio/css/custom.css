@@ -1,0 +1,97 @@
+
+/* ---------- TEXT COLORS ------------ */
+.text-purple-base {
+  color: #892ccd;
+}
+
+.text-purple-light {
+  color: #a85fdd;
+}
+
+.text-gray-100 {
+  color: #0f0f1a;
+}
+
+.text-gray-200 {
+  color: #131320;
+}
+
+.text-gray-300 {
+  color: #1a1b2d;
+}
+
+.text-gray-400 {
+  color: #45455f;
+}
+
+.text-gray-500 {
+  color: #7a7b9f;
+}
+
+.text-gray-600 {
+  color: #b5b6c9;
+}
+
+.text-gray-700 {
+  color: #e4e5ec;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+/* ---------- BACKGROUNDS COLORS ------------ */
+.bg-purple-base {
+  background-color: #892ccd;
+}
+
+.bg-purple-light {
+  background-color: #a85fdd;
+}
+
+.bg-gray-100 {
+  background-color: #0f0f1a;
+}
+
+.bg-gray-200 {
+  background-color: #131320;
+}
+
+.bg-gray-300 {
+  background-color: #1a1b2d;
+}
+
+.bg-gray-400 {
+  background-color: #45455f;
+}
+
+.bg-gray-500 {
+  background-color: #7a7b9f;
+}
+
+.bg-gray-600 {
+  background-color: #b5b6c9;
+}
+
+.bg-gray-700 {
+  background-color: #e4e5ec;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+
+
+/* ----------- FONTS ------------ */
+.font-rammeto {
+  font-family: "Rammetto One", sans-serif;
+}
+
+.font-rajdhani {
+  font-family: "Rajdhani", sans-serif;
+}
+
+.font-nunito {
+  font-family: "Nunito Sans", sans-serif;
+}

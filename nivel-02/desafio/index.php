@@ -29,32 +29,56 @@
     </section>
 
     <section class="flex-1 flex justify-center items-center">
-      <div id="card-login" class="flex flex-col w-[328px]">
 
+      <!-- ----- LOGIN CARD ----- -->
+      <div id="card-login" class="flex flex-col w-[328px] hidden">
+
+        <!-- SELECT FOR CHOOSE LOGIN OR REGISTER -->
         <div
           id="select-login-or-register"
           class="w-[328px] h-[48px] bg-gray-200 flex p-1 rounded-[10px]">
-          <button type="button" class="flex justify-center items-center w-full h-full rounded-md bg-gray-300 text-purple-light font-nunito cursor-pointer">Login</button>
-          <button type="button" class="flex justify-center items-center w-full h-full rounded-md text-gray-500 font-nunito cursor-pointer">Cadastro</button>
+          <button
+            type="button"
+            class="flex justify-center items-center w-full h-full rounded-md bg-gray-300 text-purple-light font-nunito cursor-pointer">
+            Login
+          </button>
+          <button
+            type="button"
+            class="flex justify-center items-center w-full h-full rounded-md text-gray-500 font-nunito cursor-pointer">
+            Cadastro
+          </button>
         </div>
 
         <h1 class="font-rammeto text-2xl mt-[52px] mb-[20px]">Acesse sua conta</h1>
 
         <form class="flex flex-col gap-3">
-          <div id="input" class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
-            <img src="assets/Icon/Envelope-Regular.svg" alt="" class=" ml-4 w-[20px]">
-            <input type="email" placeholder="E-mail" class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
+          <div class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
+            <img
+              src="assets/Icon/Envelope-Regular.svg"
+              alt=""
+              class=" ml-4 w-[20px]">
+            <input
+              type="email"
+              placeholder="E-mail"
+              class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
           </div>
-          <div id="input" class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
-            <img src="assets/Icon/Password-Regular.svg" alt="" class=" ml-4 w-[20px]">
-            <input type="password" placeholder="Senha" class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
+          <div class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
+            <img
+              src="assets/Icon/Password-Regular.svg"
+              alt=""
+              class="ml-4 w-[20px]">
+            <input
+              type="password"
+              placeholder="Senha"
+              class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
           </div>
 
           <button type="button" class="w-full h-[48px] bg-purple-base rounded-md font-nunito mt-5">Entrar</button>
         </form>
       </div>
 
-      <div id="card-register" class="flex flex-col w-[328px] hidden">
+      <!-- ----- REGISTER CARD ----- -->
+      <div id="card-register" class="flex flex-col w-[328px]">
 
         <div
           id="select-login-or-register"
@@ -66,17 +90,35 @@
         <h1 class="font-rammeto text-2xl mt-[52px] mb-[20px]">Crie sua conta</h1>
 
         <form class="flex flex-col gap-3">
-          <div id="input" class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
-            <img src="assets/Icon/User-Regular.svg" alt="" class=" ml-4 w-[20px]">
-            <input type="text" placeholder="Nome" class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
+          <div class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
+            <img
+              src="assets/Icon/User-Regular.svg"
+              alt=""
+              class=" ml-4 w-[20px]">
+            <input
+              type="text"
+              placeholder="Nome"
+              class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
           </div>
-          <div id="input" class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
-            <img src="assets/Icon/Envelope-Regular.svg" alt="" class=" ml-4 w-[20px]">
-            <input type="email" placeholder="E-mail" class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
+          <div class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
+            <img
+              src="assets/Icon/Envelope-Regular.svg"
+              alt=""
+              class=" ml-4 w-[20px]">
+            <input
+              type="email"
+              placeholder="E-mail"
+              class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
           </div>
-          <div id="input" class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
-            <img src="assets/Icon/Password-Regular.svg" alt="" class=" ml-4 w-[20px]">
-            <input type="password" placeholder="Senha" class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
+          <div class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
+            <img
+              src="assets/Icon/Password-Regular.svg"
+              alt=""
+              class=" ml-4 w-[20px]">
+            <input
+              type="password"
+              placeholder="Senha"
+              class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
           </div>
 
           <button class="w-full h-[48px] bg-purple-base rounded-md font-nunito mt-5">Criar</button>

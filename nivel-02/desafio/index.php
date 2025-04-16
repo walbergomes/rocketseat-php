@@ -17,131 +17,58 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rajdhani:wght@300;400;500;600;700&family=Rammetto+One&display=swap" rel="stylesheet">
 </head>
 
-<body class="h-screen bg-gray-100 p-4">
+<body class="h-screen bg-gray-100 px-4">
 
-  <div class="w-full h-full text-white flex gap-4">
+  <header class="h-[80px] flex items-center justify-between">
+    <img
+      src="/assets/Vector/Logo.svg"
+      alt=""
+      class="w-[45px]">
 
-    <section class="flex-1 h-full rounded-2xl overflow-hidden relative">
-      <img src="assets/Vector/Logo.svg" alt="" class="absolute w-[60px] left-6 top-7">
-      <span class="absolute left-6 bottom-25 text-gray-600 font-rammeto text-base">ab filmes</span>
-      <p class="absolute left-6 bottom-10 font-rammeto text-xl w-[346px]">O guia definitivo para os amantes do cinema</p>
-      <img src="assets/Image/Login.png" alt="" class="h-full w-full object-cover">
-    </section>
+    <div id="select-mode" class="flex gap-6">
+      <button
+        type="button"
+        id="explorer"
+        class="flex items-center gap-2 text-purple-light font-nunito bg-gray-300 px-3 py-2 rounded-md cursor-pointer">
+        <img
+          src="assets/Icon/Popcorn-Regular.svg"
+          alt=""
+          class="w-[20px]">
+        Explorer
+      </button>
+      <button
+        type="button"
+        id="my-films"
+        class="flex items-center gap-2 text-gray-500 font-nunito px-3 py-2 rounded-md cursor-pointer">
+        <img
+          src="assets/Icon/FilmSlate-Regular.svg"
+          alt=""
+          class="w-[20px]">
+        Meus filmes
+      </button>
+    </div>
 
-    <section class="flex-1 flex flex-col justify-center items-center">
-
-      <!-- SELECT FOR CHOOSE LOGIN OR REGISTER -->
-      <div
-        id="select-login-or-register"
-        class="w-[328px] h-[48px] bg-gray-200 flex p-1 rounded-[10px]">
-        <button
-          type="button"
-          class="flex justify-center items-center w-full h-full rounded-md bg-gray-300 text-purple-light font-nunito cursor-pointer">
-          Login
-        </button>
-        <button
-          type="button"
-          class="flex justify-center items-center w-full h-full rounded-md text-gray-500 font-nunito cursor-pointer">
-          Cadastro
-        </button>
+    <div class="flex items-center gap-3">
+      <span class="text-gray-600 font-nunito text-sm">Olá, Jordan</span>
+      <div class="w-[32px] h-[32px] rounded-md bg-purple-base p-px overflow-hidden">
+        <img
+          src="./assets/Image/profile.jpg"
+          alt=""
+          class="w-full h-full object-cover rounded-md">
       </div>
 
-      <!-- ----- LOGIN CARD ----- -->
-      <div id="card-login" class="flex flex-col w-[328px] ">
+      <div class="divider h-[32px] w-[2px] bg-gray-300"></div>
 
-        <!-- <div
-          id="select-login-or-register"
-          class="w-[328px] h-[48px] bg-gray-200 flex p-1 rounded-[10px]">
-          <button
-            type="button"
-            class="flex justify-center items-center w-full h-full rounded-md bg-gray-300 text-purple-light font-nunito cursor-pointer">
-            Login
-          </button>
-          <button
-            type="button"
-            class="flex justify-center items-center w-full h-full rounded-md text-gray-500 font-nunito cursor-pointer">
-            Cadastro
-          </button>
-        </div> -->
-
-        <h1 class="font-rammeto text-2xl mt-[52px] mb-[20px]">Acesse sua conta</h1>
-
-        <form class="flex flex-col gap-3">
-          <div class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
-            <img
-              src="assets/Icon/Envelope-Regular.svg"
-              alt=""
-              class=" ml-4 w-[20px]">
-            <input
-              type="email"
-              placeholder="E-mail"
-              class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
-          </div>
-          <div class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
-            <img
-              src="assets/Icon/Password-Regular.svg"
-              alt=""
-              class="ml-4 w-[20px]">
-            <input
-              type="password"
-              placeholder="Senha"
-              class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
-          </div>
-
-          <button type="button" class="w-full h-[48px] bg-purple-base rounded-md font-nunito mt-5">Entrar</button>
-        </form>
-      </div>
-
-      <!-- ----- REGISTER CARD ----- -->
-      <div id="card-register" class="flex flex-col w-[328px] hidden">
-
-        <!-- <div
-          id="select-login-or-register"
-          class="w-[328px] h-[48px] bg-gray-200 flex p-1 rounded-[10px]">
-          <span class="flex justify-center items-center w-full h-full rounded-md text-gray-500 font-nunito cursor-pointer">Login</span>
-          <span class="flex justify-center items-center w-full h-full rounded-md bg-gray-300 text-purple-light  font-nunito cursor-pointer">Cadastro</span>
-        </div> -->
-
-        <h1 class="font-rammeto text-2xl mt-[52px] mb-[20px]">Crie sua conta</h1>
-
-        <form class="flex flex-col gap-3">
-          <div class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
-            <img
-              src="assets/Icon/User-Regular.svg"
-              alt=""
-              class=" ml-4 w-[20px]">
-            <input
-              type="text"
-              placeholder="Nome"
-              class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
-          </div>
-          <div class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
-            <img
-              src="assets/Icon/Envelope-Regular.svg"
-              alt=""
-              class=" ml-4 w-[20px]">
-            <input
-              type="email"
-              placeholder="E-mail"
-              class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
-          </div>
-          <div class="w-full h-[48px] border flex rounded-md border-[#1a1b2d] has-focus:outline">
-            <img
-              src="assets/Icon/Password-Regular.svg"
-              alt=""
-              class=" ml-4 w-[20px]">
-            <input
-              type="password"
-              placeholder="Senha"
-              class="w-screen p-2 rounded-md outline-none placeholder:text-gray-500 placeholder:font-nunito">
-          </div>
-
-          <button class="w-full h-[48px] bg-purple-base rounded-md font-nunito mt-5">Criar</button>
-        </form>
-      </div>
-    </section>
-
-  </div>
+      <button
+        type="button"
+        class="flex items-center justify-center bg-gray-300 p-1.5 rounded-md cursor-pointer">
+        <img
+          src="assets/Icon/SignOut-Regular.svg"
+          alt=""
+          class="w-[20px] h-[20px]">
+      </button>
+    </div>
+  </header>
 
 </body>
 

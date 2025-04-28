@@ -73,9 +73,21 @@
 
   <div class="max-w-7xl m-auto pb-[60px]">
 
+    <main class="w-full h-full mt-16 flex gap-12">
 
+      <section class="w-1/3 bg-gray-300 h-[490px] rounded-[18px]">
+        <label class="block w-full h-full flex flex-col items-center justify-center cursor-pointer">
+          <img src="./assets/Icon/UploadSimple-Regular.svg" alt="">
+          <span class="font-nunito text-base text-gray-500 mt-3">Fazer upload</span>
+          <input type="file" class="opacity-[0]">
+        </label>
+      </section>
 
+      <section class="w-2/3 bg-red-700">ASD</section>
 
+    </main>
+
+  </div>
 </body>
 
 </html>

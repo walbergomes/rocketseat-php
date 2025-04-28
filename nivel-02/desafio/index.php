@@ -40,9 +40,9 @@
       <button
         type="button"
         id="explorer"
-        class="flex items-center gap-2 text-purple-light font-nunito bg-gray-300 px-3 py-2 rounded-md cursor-pointer">
+        class="flex items-center gap-2 text-gray-500 font-nunito px-3 py-2 rounded-md cursor-pointer">
         <img
-          src="assets/Icon/FilmSlate-Regular-Selected.svg"
+          src="assets/Icon/FilmSlate-Regular.svg"
           alt=""
           class="w-[20px]">
         Meus filmes
@@ -72,128 +72,7 @@
   </header>
 
   <div class="max-w-7xl m-auto pb-[60px]">
-    <section class="flex justify-between mt-16 ">
-      <h1 class="text-gray-50 text-2xl font-[Rammetto_One]">Meus filmes</h1>
 
-      <div id="btn" class="flex gap-4">
-        <div id="input-wrapper" class="flex gap-2 h-[48px] w-[264px] border border-[#1A1B2D] rounded-md focus-within:outline outline-[#892CCD]">
-          <img src="assets/Icon/MagnifyingGlass-Regular.svg" alt="" class="w-[16px] ml-3">
-          <input type="text" placeholder="Pesquisar filme" class="placeholder:text-[#7A7B9F] outline-none text-white">
-        </div>
-        <div class="divider h-[48px] w-[2px] bg-gray-300"></div>
-
-        <button id="add-movie" class="flex gap-2 items-center px-5 py-3 bg-[#892CCD] font-[Nunito_Sans] text-base text-white rounded-md hover:brightness-[.8] cursor-pointer">
-          <img src="assets/Icon/Plus-Regular.svg" alt="" class="w-[20px]">
-          Novo
-        </button>
-      </div>
-
-
-    </section>
-
-    <!-- ### MY FILMS ### -->
-    <section class="w-full flex flex-wrap gap-y-[24px] justify-between mt-6">
-      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-        <img
-          src="assets/Image/Films/pobres-criaturas.png"
-          alt=""
-          class="w-full h-full object-cover">
-        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
-          bg-gradient-to-b from-transparent to-gray-900/90"></div>
-
-        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-          /5
-          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-        </div>
-
-        <figcaption class="absolute bottom-5 left-5">
-          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Pobres Criaturas</h2>
-          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Drama • 2023</p>
-        </figcaption>
-      </figure>
-
-      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-        <img
-          src="assets/Image/Films/o-corvo.png"
-          alt=""
-          class="w-full h-full object-cover">
-        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
-          bg-gradient-to-b from-transparent to-gray-900/90"></div>
-
-        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-          /5
-          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-        </div>
-
-        <figcaption class="absolute bottom-5 left-5">
-          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">O Corvo</h2>
-          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Fantasia • 2024</p>
-        </figcaption>
-      </figure>
-
-      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-        <img
-          src="assets/Image/Films/alien.png"
-          alt=""
-          class="w-full h-full object-cover">
-        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
-          bg-gradient-to-b from-transparent to-gray-900/90"></div>
-
-        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-          /5
-          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-        </div>
-
-        <figcaption class="absolute bottom-5 left-5">
-          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Alien: Covenant</h2>
-          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Horror • 2017</p>
-        </figcaption>
-      </figure>
-
-      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-        <img
-          src="assets/Image/Films/mad-max.png"
-          alt=""
-          class="w-full h-full object-cover">
-        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
-          bg-gradient-to-b from-transparent to-gray-900/90"></div>
-
-        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-          /5
-          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-        </div>
-
-        <figcaption class="absolute bottom-5 left-5">
-          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Mad Max: Estrada da Fúria</h2>
-          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Ação • 2015</p>
-        </figcaption>
-      </figure>
-
-    </section>
-
-    <!-- ### NOT FILM REGISTER ### -->
-    <section class="w-full mt-6 flex flex-col items-center gap-[20px] hidden">
-      <img src="./assets/Icon/FilmSlate-Regular.svg" alt="" class="w-[44px] h-[44px]">
-
-      <div class="text-center">
-        <p class="font-[Nunito_Sans] text-base text-[#B5B6C9]">
-          Nenhum filme registrado.
-        </p>
-        <p class="font-[Nunito_Sans] text-base text-[#B5B6C9]">
-          Que tal começar cadastrando seu primeiro filme?
-        </p>
-      </div>
-
-      <button class="flex text-base text-[#7A7B9F] items-center gap-[8px] font-[Nunito_Sans] cursor-pointer hover:brightness-[.8]">
-        <img src="./assets/Icon/Plus-Regular-Gray.svg" alt="" class="w-[20px]">
-        Cadastrar novo
-      </button>
-    </section>
-  </div>
 
 
 

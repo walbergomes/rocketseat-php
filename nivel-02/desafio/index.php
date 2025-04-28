@@ -80,7 +80,7 @@
     </section>
 
     <!-- ### FILMS ### -->
-    <section class="w-full flex flex-wrap gap-y-[24px] justify-between mt-6 hidden">
+    <section class="w-full flex flex-wrap gap-y-[24px] justify-between mt-6">
       <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
         <img
           src="assets/Image/Films/pobres-criaturas.png"
@@ -243,9 +243,9 @@
 
     </section>
 
-    <!-- ### NOT FOUND FILM ### -->
 
-    <section class="w-full mt-6 flex flex-col items-center gap-[20px]">
+    <!-- ### NOT FOUND FILM ### -->
+    <section class="w-full mt-6 flex flex-col items-center gap-[20px] hidden">
       <img src="./assets/Icon/FilmSlate-Regular.svg" alt="" class="w-[44px] h-[44px]">
 
       <div class="text-center">

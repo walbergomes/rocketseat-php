@@ -73,7 +73,7 @@
 
   <div class="max-w-7xl m-auto pb-[60px]">
     <section class="flex justify-between mt-16">
-      <h1 class="text-gray-50 text-2xl font-[Rammetto_One]">Explorar</h1>
+      <h1 class="text-gray-50 text-2xl font-[Rammetto_One]">Meus filmes</h1>
 
       <div id="btn" class="flex gap-4">
         <div id="input-wrapper" class="flex gap-2 h-[48px] w-[264px] border border-[#1A1B2D] rounded-md focus-within:outline outline-[#892CCD]">

@@ -92,7 +92,7 @@
     </section>
 
     <!-- ### MY FILMS ### -->
-    <section class="w-full flex flex-wrap gap-y-[24px] justify-between mt-6 hidden">
+    <section class="w-full flex flex-wrap gap-y-[24px] justify-between mt-6">
       <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
         <img
           src="assets/Image/Films/pobres-criaturas.png"
@@ -175,16 +175,16 @@
 
     </section>
 
-       <!-- ### NOT FILM REGISTER ### -->
-       <section class="w-full mt-6 flex flex-col items-center gap-[20px]">
+    <!-- ### NOT FILM REGISTER ### -->
+    <section class="w-full mt-6 flex flex-col items-center gap-[20px] hidden">
       <img src="./assets/Icon/FilmSlate-Regular.svg" alt="" class="w-[44px] h-[44px]">
 
       <div class="text-center">
         <p class="font-[Nunito_Sans] text-base text-[#B5B6C9]">
-        Nenhum filme registrado. 
+          Nenhum filme registrado.
         </p>
         <p class="font-[Nunito_Sans] text-base text-[#B5B6C9]">
-        Que tal começar cadastrando seu primeiro filme?
+          Que tal começar cadastrando seu primeiro filme?
         </p>
       </div>
 

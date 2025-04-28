@@ -72,7 +72,7 @@
   </header>
 
   <div class="max-w-7xl m-auto pb-[60px]">
-    <section class="flex justify-between mt-16">
+    <section class="flex justify-between mt-16 ">
       <h1 class="text-gray-50 text-2xl font-[Rammetto_One]">Meus filmes</h1>
 
       <div id="btn" class="flex gap-4">
@@ -91,7 +91,8 @@
 
     </section>
 
-    <section class="w-full flex flex-wrap gap-y-[24px] justify-between mt-6">
+    <!-- ### MY FILMS ### -->
+    <section class="w-full flex flex-wrap gap-y-[24px] justify-between mt-6 hidden">
       <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
         <img
           src="assets/Image/Films/pobres-criaturas.png"
@@ -172,6 +173,25 @@
         </figcaption>
       </figure>
 
+    </section>
+
+       <!-- ### NOT FILM REGISTER ### -->
+       <section class="w-full mt-6 flex flex-col items-center gap-[20px]">
+      <img src="./assets/Icon/FilmSlate-Regular.svg" alt="" class="w-[44px] h-[44px]">
+
+      <div class="text-center">
+        <p class="font-[Nunito_Sans] text-base text-[#B5B6C9]">
+        Nenhum filme registrado. 
+        </p>
+        <p class="font-[Nunito_Sans] text-base text-[#B5B6C9]">
+        Que tal começar cadastrando seu primeiro filme?
+        </p>
+      </div>
+
+      <button class="flex text-base text-[#7A7B9F] items-center gap-[8px] font-[Nunito_Sans] cursor-pointer hover:brightness-[.8]">
+        <img src="./assets/Icon/Plus-Regular-Gray.svg" alt="" class="w-[20px]">
+        Cadastrar novo
+      </button>
     </section>
   </div>
 

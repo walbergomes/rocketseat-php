@@ -70,13 +70,176 @@
     </div>
   </header>
 
-  <main class="max-w-7xl m-auto">
+  <main class="max-w-7xl m-auto pb-[60px]">
     <section class="flex justify-between mt-16">
       <h1 class="text-gray-50 text-2xl font-[Rammetto_One]">Explorar</h1>
-      <div class="input-wrapper flex gap-2 h-[48px] w-[264px] border border-[#1A1B2D] rounded-md focus-within:outline outline-[#892CCD]" >
+      <div class="input-wrapper flex gap-2 h-[48px] w-[264px] border border-[#1A1B2D] rounded-md focus-within:outline outline-[#892CCD]">
         <img src="assets/Icon/MagnifyingGlass-Regular.svg" alt="" class="w-[16px] ml-3">
         <input type="text" placeholder="Pesquisar filme" class="placeholder:text-[#7A7B9F] outline-none text-white">
       </div>
+    </section>
+
+    <section class="w-full flex flex-wrap gap-y-[24px] justify-between mt-6">
+      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
+        <img
+          src="assets/Image/Films/pobres-criaturas.png"
+          alt=""
+          class="w-full h-full object-cover">
+        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
+          bg-gradient-to-b from-transparent to-gray-900/90"></div>
+
+        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
+          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
+          /5
+          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
+        </div>
+
+        <figcaption class="absolute bottom-5 left-5">
+          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Pobres Criaturas</h2>
+          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Drama • 2023</p>
+        </figcaption>
+      </figure>
+      
+      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
+        <img
+          src="assets/Image/Films/meu-malvado.png"
+          alt=""
+          class="w-full h-full object-cover">
+        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
+          bg-gradient-to-b from-transparent to-gray-900/90"></div>
+
+        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
+          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
+          /5
+          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
+        </div>
+
+        <figcaption class="absolute bottom-5 left-5">
+          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Meu Malvado Favorito 4</h2>
+          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Animação • 2024</p>
+        </figcaption>
+      </figure>
+      
+      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
+        <img
+          src="assets/Image/Films/deadpol-x-wolverine.png"
+          alt=""
+          class="w-full h-full object-cover">
+        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
+          bg-gradient-to-b from-transparent to-gray-900/90"></div>
+
+        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
+          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
+          /5
+          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
+        </div>
+
+        <figcaption class="absolute bottom-5 left-5">
+          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Deadpool & Wolverine</h2>
+          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Ação • 2023</p>
+        </figcaption>
+      </figure>
+      
+      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
+        <img
+          src="assets/Image/Films/o-corvo.png"
+          alt=""
+          class="w-full h-full object-cover">
+        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
+          bg-gradient-to-b from-transparent to-gray-900/90"></div>
+
+        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
+          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
+          /5
+          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
+        </div>
+
+        <figcaption class="absolute bottom-5 left-5">
+          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">O Corvo</h2>
+          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Fantasia • 2024</p>
+        </figcaption>
+      </figure>
+      
+      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
+        <img
+          src="assets/Image/Films/senhor-dos-aneis.png"
+          alt=""
+          class="w-full h-full object-cover">
+        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
+          bg-gradient-to-b from-transparent to-gray-900/90"></div>
+
+        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
+          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
+          /5
+          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
+        </div>
+
+        <figcaption class="absolute bottom-5 left-5">
+          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">O Senhor dos Anéis: A Sociedade do Anel</h2>
+          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Aventura • 2001</p>
+        </figcaption>
+      </figure>
+      
+      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
+        <img
+          src="assets/Image/Films/alien.png"
+          alt=""
+          class="w-full h-full object-cover">
+        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
+          bg-gradient-to-b from-transparent to-gray-900/90"></div>
+
+        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
+          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
+          /5
+          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
+        </div>
+
+        <figcaption class="absolute bottom-5 left-5">
+          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Alien: Covenant</h2>
+          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Horror • 2017</p>
+        </figcaption>
+      </figure>
+      
+      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
+        <img
+          src="assets/Image/Films/divertidamente.png"
+          alt=""
+          class="w-full h-full object-cover">
+        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
+          bg-gradient-to-b from-transparent to-gray-900/90"></div>
+
+        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
+          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
+          /5
+          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
+        </div>
+
+        <figcaption class="absolute bottom-5 left-5">
+          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Divertidamente 2</h2>
+          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Animação • 2024</p>
+        </figcaption>
+      </figure>
+      
+      <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
+        <img
+          src="assets/Image/Films/mad-max.png"
+          alt=""
+          class="w-full h-full object-cover">
+        <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
+          bg-gradient-to-b from-transparent to-gray-900/90"></div>
+
+        <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
+          <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
+          /5
+          <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
+        </div>
+
+        <figcaption class="absolute bottom-5 left-5">
+          <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Mad Max: Estrada da Fúria</h2>
+          <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Ação • 2015</p>
+        </figcaption>
+      </figure>
+
     </section>
   </main>
 

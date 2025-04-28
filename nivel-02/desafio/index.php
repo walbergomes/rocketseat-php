@@ -79,7 +79,8 @@
       </div>
     </section>
 
-    <section class="w-full flex flex-wrap gap-y-[24px] justify-between mt-6">
+    <!-- ### FILMS ### -->
+    <section class="w-full flex flex-wrap gap-y-[24px] justify-between mt-6 hidden">
       <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
         <img
           src="assets/Image/Films/pobres-criaturas.png"
@@ -99,7 +100,7 @@
           <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Drama • 2023</p>
         </figcaption>
       </figure>
-      
+
       <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
         <img
           src="assets/Image/Films/meu-malvado.png"
@@ -119,7 +120,7 @@
           <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Animação • 2024</p>
         </figcaption>
       </figure>
-      
+
       <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
         <img
           src="assets/Image/Films/deadpol-x-wolverine.png"
@@ -139,7 +140,7 @@
           <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Ação • 2023</p>
         </figcaption>
       </figure>
-      
+
       <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
         <img
           src="assets/Image/Films/o-corvo.png"
@@ -159,7 +160,7 @@
           <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Fantasia • 2024</p>
         </figcaption>
       </figure>
-      
+
       <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
         <img
           src="assets/Image/Films/senhor-dos-aneis.png"
@@ -179,7 +180,7 @@
           <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Aventura • 2001</p>
         </figcaption>
       </figure>
-      
+
       <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
         <img
           src="assets/Image/Films/alien.png"
@@ -199,7 +200,7 @@
           <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Horror • 2017</p>
         </figcaption>
       </figure>
-      
+
       <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
         <img
           src="assets/Image/Films/divertidamente.png"
@@ -219,7 +220,7 @@
           <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Animação • 2024</p>
         </figcaption>
       </figure>
-      
+
       <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
         <img
           src="assets/Image/Films/mad-max.png"
@@ -241,6 +242,27 @@
       </figure>
 
     </section>
+
+    <!-- ### NOT FOUND FILM ### -->
+
+    <section class="w-full mt-6 flex flex-col items-center gap-[20px]">
+      <img src="./assets/Icon/FilmSlate-Regular.svg" alt="" class="w-[44px] h-[44px]">
+
+      <div class="text-center">
+        <p class="font-[Nunito_Sans] text-base text-[#B5B6C9]">
+          Nenhum filme encontrado com “Filme ABC”
+        </p>
+        <p class="font-[Nunito_Sans] text-base text-[#B5B6C9]">
+          Que tal tentar outra busca?
+        </p>
+      </div>
+
+      <button class="flex text-base text-[#7A7B9F] items-center gap-[8px] font-[Nunito_Sans] cursor-pointer hover:brightness-[.8]">
+        <img src="./assets/Icon/X-Regular.svg" alt="" class="w-[20px]">
+        Limpar filtro
+      </button>
+    </section>
+
   </main>
 
 </body>

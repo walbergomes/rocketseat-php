@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,8 +49,8 @@
     </div>
 
     <div class="flex items-center gap-3">
-      <span class="text-gray-600 font-nunito text-sm">Olá, Jordan</span>
-      <div class="w-[32px] h-[32px] rounded-md bg-purple-base p-px overflow-hidden">
+      <span class="text-gray-600 font-nunito text-sm cursor-pointer">Olá, Jordan</span>
+      <div class="w-[32px] h-[32px] rounded-md bg-purple-base p-px overflow-hidden cursor-pointer">
         <img
           src="./assets/Image/profile.jpg"
           alt=""
@@ -69,6 +69,16 @@
       </button>
     </div>
   </header>
+
+  <main class="max-w-7xl m-auto">
+    <section class="flex justify-between mt-16">
+      <h1 class="text-gray-50 text-2xl font-[Rammetto_One]">Explorar</h1>
+      <div class="input-wrapper flex gap-2 h-[48px] w-[264px] border border-[#1A1B2D] rounded-md focus-within:outline outline-[#892CCD]" >
+        <img src="assets/Icon/MagnifyingGlass-Regular.svg" alt="" class="w-[16px] ml-3">
+        <input type="text" placeholder="Pesquisar filme" class="placeholder:text-[#7A7B9F] outline-none text-white">
+      </div>
+    </section>
+  </main>
 
 </body>
 

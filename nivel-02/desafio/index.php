@@ -73,48 +73,6 @@
 
   <div class="max-w-7xl m-auto pb-[60px]">
 
-    <main class="w-full h-full mt-16 flex gap-12">
-
-      <section class="w-1/3 bg-gray-300 h-[490px] rounded-[18px]">
-        <label class="block w-full h-full flex flex-col items-center justify-center cursor-pointer">
-          <img src="./assets/Icon/UploadSimple-Regular.svg" alt="">
-          <span class="font-nunito text-base text-gray-500 mt-3">Fazer upload</span>
-          <input type="file" class="opacity-[0]">
-        </label>
-      </section>
-
-      <section class="w-2/3 flex flex-col justify-between">
-        <h2 class="text-gray-700 font-rajdhani text-xl font-bold">Novo filme</h2>
-        <form class="mt-6 flex flex-col gap-4">
-          <div class="input-wrapper flex gap-2 h-[48px] border border-[#1A1B2D] rounded-md focus-within:outline outline-[#892CCD]">
-            <img src="assets/Icon/FilmSlate-Regular.svg" alt="" class="w-[16px] ml-3">
-            <input type="text" placeholder="Título" class="placeholder:text-[#7A7B9F] outline-none text-white w-full">
-          </div>
-
-          <div class="flex gap-4">
-            <div class="input-wrapper flex gap-2 h-[48px] w-full border border-[#1A1B2D] rounded-md focus-within:outline outline-[#892CCD]">
-              <img src="assets/Icon/CalendarBlank-Regular.svg" alt="" class="w-[16px] ml-3">
-              <input type="text" placeholder="Ano" class="placeholder:text-[#7A7B9F] outline-none text-white w-full">
-            </div>
-            <div class="input-wrapper flex gap-2 h-[48px] w-full border border-[#1A1B2D] rounded-md focus-within:outline outline-[#892CCD]">
-              <img src="assets/Icon/Tag-Regular.svg" alt="" class="w-[16px] ml-3">
-              <input type="text" placeholder="Categoria" class="placeholder:text-[#7A7B9F] outline-none text-white w-full">
-            </div>
-          </div>
-
-          <textarea placeholder="Descrição" class="w-full h-[200px] pl-4 pt-3  placeholder:text-[#7A7B9F] border border-[#1A1B2D] rounded-md focus-within:outline outline-[#892CCD] text-white resize-none"></textarea>
-        </form>
-
-        <div id="btns" class="flex gap-8 justify-end">
-          <button class="font-nunito text-gray-500 text-base hover:brightness-[.8] cursor-pointer">Cancelar</button>
-          <button class="font-nunito text-base text-white px-5 py-3 bg-purple-base rounded-md hover:brightness-[.8] cursor-pointer">Salvar</button>
-        </div>
-
-
-      </section>
-
-    </main>
-
   </div>
 </body>
 

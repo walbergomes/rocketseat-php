@@ -71,7 +71,7 @@
     </div>
   </header>
 
-  <div class="max-w-7xl m-auto pb-[60px]">
+  <div class="max-w-7xl m-auto pb-38">
     <main class="w-full h-full mt-16 flex gap-12">
 
       <!-- ### FILM IMAGE SIDE ### -->
@@ -122,6 +122,125 @@
         </p>
       </section>
     </main>
+
+
+    <!-- ### REVIEW SECTION ### -->
+    <section class="mt-36">
+      <header class="flex justify-between items-center">
+        <h3 class="text-[#E5E2E9] font-rajdhani text-2xl font-bold">Avaliações</h3>
+        <button class="py-3 px-5 rounded-md bg-purple-base text-white flex items-center gap-2 hover:brightness-[.8] cursor-pointer">
+          <img src="assets/Icon/Star-Regular.svg" alt="" class="w-[20px]">
+          Avaliar filme
+        </button>
+      </header>
+
+      <div class="flex flex-col gap-3 mt-[40px]">
+
+        <div id="card" class="bg-gray-200 p-8 rounded-xl flex justify-between items-stretch">
+          <div id="profile" class="flex gap-4">
+            <div class="w-[48px] h-[48px] rounded-md bg-purple-base p-px overflow-hidden cursor-pointer">
+              <img
+                src="./assets/Image/profile.jpg"
+                alt=""
+                class="w-full h-full object-cover rounded-md">
+            </div>
+
+            <div>
+              <div id="name">
+                <span class="text-gray-700 text-base font-rajdhani font-bold">Jordan Felix</span>
+                <span class="inline-block px-[6px] py-[3px] bg-purple-base rounded-full text-xs text-gray-700 font-bold">você</span>
+              </div>
+
+              <p class="font-nunito text-gray-500 text-sm">4 filmes avaliados</p>
+            </div>
+
+          </div>
+
+          <div id="divider" class="w-[2px] bg-gray-300"></div>
+
+          <p class="text-base text-gray-500 font-nunito font-normal max-w-xl">
+            Uma fusão hipnotizante de drama e fantasia, este filme nos leva a um universo surreal repleto de simbolismo e emoção. A história é delicadamente tecida com momentos de profunda reflexão, enquanto os personagens navegam por dilemas humanos em meio a paisagens encantadas.
+          </p>
+
+          <div class="flex items-center gap-[6px] px-[10px] h-[32px] bg-gray-300 rounded-md text-gray-700 text-xs font-rajdhani">
+            <span class="text-xl leading-none font-bold">4</span>
+            /5
+            <img src="assets/Icon/Star-Fill-Purple.svg" alt="" class="w-[16px]">
+          </div>
+
+        </div>
+
+        <div id="card" class="bg-gray-200 p-8 rounded-xl flex justify-between items-stretch">
+          <div id="profile" class="flex gap-4">
+            <div class="w-[48px] h-[48px] rounded-md bg-purple-base p-px overflow-hidden cursor-pointer">
+              <img
+                src="./assets/Image/sheldon.jpg"
+                alt=""
+                class="w-full h-full object-cover rounded-md">
+            </div>
+
+            <div>
+              <div id="name">
+                <span class="text-gray-700 text-base font-rajdhani font-bold">Sheldon Cooper</span>
+                <!-- <span class="inline-block px-[6px] py-[3px] bg-purple-base rounded-full text-xs text-gray-700 font-bold">você</span> -->
+              </div>
+
+              <p class="font-nunito text-gray-500 text-sm">483 filmes avaliados</p>
+            </div>
+
+          </div>
+
+          <div id="divider" class="w-[2px] bg-gray-300"></div>
+
+          <p class="text-base text-gray-500 font-nunito font-normal max-w-xl">
+            Trata-se, indubitavelmente, de uma obra cinematográfica que beira a perfeição estética — uma simbiose meticulosamente calibrada entre os gêneros dramático e fantástico. A estrutura narrativa demonstra notável competência em manipular os arquétipos emocionais humanos, enquanto os personagens, de complexidade psicológica surpreendente, conduzem o espectador por uma jornada semiótica onde as fronteiras entre o tangível e o onírico são, para nossa satisfação intelectual, agradavelmente indistintas.
+          </p>
+
+          <div class="flex items-center gap-[6px] px-[10px] h-[32px] bg-gray-300 rounded-md text-gray-700 text-xs font-rajdhani">
+            <span class="text-xl leading-none font-bold">4</span>
+            /5
+            <img src="assets/Icon/Star-Fill-Purple.svg" alt="" class="w-[16px]">
+          </div>
+
+        </div>
+
+        <div id="card" class="bg-gray-200 p-8 rounded-xl flex justify-between items-stretch">
+          <div id="profile" class="flex gap-4">
+            <div class="w-[48px] h-[48px] rounded-md bg-purple-base p-px overflow-hidden cursor-pointer">
+              <img
+                src="./assets/Image/mussum.jpg"
+                alt=""
+                class="w-full h-full object-cover rounded-md">
+            </div>
+
+            <div>
+              <div id="name">
+                <span class="text-gray-700 text-base font-rajdhani font-bold">Mussum</span>
+                <!-- <span class="inline-block px-[6px] py-[3px] bg-purple-base rounded-full text-xs text-gray-700 font-bold">você</span> -->
+              </div>
+
+              <p class="font-nunito text-gray-500 text-sm">18 filmes avaliados</p>
+            </div>
+
+          </div>
+
+          <div id="divider" class="w-[2px] bg-gray-300"></div>
+
+          <p class="text-base text-gray-500 font-nunito font-normal max-w-xl">
+            Ih, mermão! Esse filminho é uma viagem das emoçãozis, misturando draminha com fantasiazis na maciota, sô! A históra fala de trem tipo amô, perdimen e redençãon, tudo isso num lugarzinho mágico que gruda na mente que nem chicletis no tênis, visse! Tu começa a assistir e já era, não dá nem pra piscá os zóio, cacildis!
+          </p>
+
+          <div class="flex items-center gap-[6px] px-[10px] h-[32px] bg-gray-300 rounded-md text-gray-700 text-xs font-rajdhani">
+            <span class="text-xl leading-none font-bold">5</span>
+            /5
+            <img src="assets/Icon/Star-Fill-Purple.svg" alt="" class="w-[16px]">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
   </div>
 </body>
 

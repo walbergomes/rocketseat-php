@@ -134,7 +134,7 @@
         </button>
       </header>
 
-      <div class="flex flex-col gap-3 mt-[40px]">
+      <div class="flex flex-col gap-3 mt-[40px] hidden">
 
         <div id="card" class="bg-gray-200 p-8 rounded-xl flex justify-between items-stretch">
           <div id="profile" class="flex gap-4">
@@ -238,6 +238,19 @@
 
         </div>
 
+      </div>
+
+      <!-- ### WITHOUT REVIEWS ### -->
+      <div class="flex flex-col gap-5 items-center gap-3 mt-[40px]">
+        <img src="assets/Icon/Popcorn-Regular.svg" alt="" class="w-[44px]">
+        <div class="flex flex-col text-center">
+          <span class="text-base font-nunito text-gray-600">Nenhuma avaliação registrada.</span>
+          <span class="text-base font-nunito text-gray-600">Que tal enviar o primeiro comentário?</span>
+        </div>
+        <button class="flex items-center gap-2 text-base text-gray-500 font-nunito hover:brightness-[.8] cursor-pointer">
+          <img src="assets/Icon/Star-Regular-Gray.svg" alt="" class="w-[20px]">
+          Avaliar filme
+        </button>
       </div>
 
     </section>

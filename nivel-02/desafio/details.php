@@ -1,3 +1,16 @@
+<?php
+
+require 'dados.php';
+
+$id = $_REQUEST['id'];
+
+$filtered = array_filter($films, fn($f) => $f['id'] == $id);
+
+$film = array_pop($filtered);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -71,13 +84,12 @@
   </header>
 
   <div class="max-w-7xl m-auto pb-38">
-    <main class="w-full h-full mt-16 flex gap-12">
-
+    <main class="w-full mt-16 flex gap-12">
       <!-- ### FILM IMAGE SIDE ### -->
       <section class="w-fit">
         <figure class="card w-[381px] h-[490px] bg-red-500 rounded-2xl overflow-hidden relative">
           <img
-            src="assets/Image/Films/pobres-criaturas.png"
+            src="assets/Image/Films/<?=$film['img']?>"
             alt=""
             class="w-full h-full object-cover">
           <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
@@ -93,15 +105,23 @@
         </button>
 
         <header class="mt-5 flex flex-col gap-3">
-          <h2 class="font-rajdhani font-bold text-3xl text-gray-700">Pobres criaturas</h2>
+          <h2 class="font-rajdhani font-bold text-3xl text-gray-700">
+            <?=$film['title']?>
+          </h2>
           <div id="info" class="font-rajdhani font-bold text-3xl">
             <div>
-              <span class="font-nunito text-base text-gray-600 font-bold">Categoria:</span>
-              <span class="font-nunito text-base text-gray-600 font-normal">Drama</span>
+              <span class="font-nunito text-base text-gray-600 font-bold">
+                Categoria:
+              </span>
+              <span class="font-nunito text-base text-gray-600 font-normal">
+                <?=$film['gender']?>
+              </span>
             </div>
             <div>
               <span class="font-nunito text-base text-gray-600 font-bold">Ano:</span>
-              <span class="font-nunito text-base text-gray-600 font-normal">2023</span>
+              <span class="font-nunito text-base text-gray-600 font-normal">
+                <?=$film['year']?>
+              </span>
             </div>
           </div>
           <div id="stars" class="flex gap-2 items-center">
@@ -111,13 +131,15 @@
             <img src="assets/Icon/Star-Fill-Purple.svg" alt="" class="w-[24px]">
             <img src="assets/Icon/Star-Regular-Purple.svg" alt="" class="w-[24px]">
 
-            <span class="ml-2 font-nunito text-2xl text-gray-700 font-bold">4</span>
+            <span class="ml-2 font-nunito text-2xl text-gray-700 font-bold">
+              <?=$film['stars']?>
+            </span>
             <span class="font-nunito text-base text-gray-600">(5) Avaliações</span>
           </div>
         </header>
 
         <p class="font-nunito text-base text-gray-600 mt-[80px]">
-          Do cineasta Yorgos Lanthimos e da produtora Emma Stone, vem o conto incrível e a evolução fantástica de Bella Baxter (Stone), uma jovem mulher trazida de volta à vida pelo brilhante e pouco ortodoxo cientista Dr. Godwin Baxter (Willem Dafoe). Sob a proteção de Baxter, Bella está ansiosa para aprender. Faminta pela mundanidade que lhe falta, Bella foge com Duncan Wedderburn (Mark Ruffalo), um advogado astuto e depravado, em uma aventura relâmpago pelos continentes. Livre dos preconceitos de sua época, Bella se torna firme em seu propósito de defender a igualdade e a libertação.
+          <?=$film['description']?>
         </p>
       </section>
     </main>

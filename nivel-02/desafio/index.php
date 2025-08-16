@@ -34,8 +34,8 @@ require 'dados.php';
       class="w-[45px]">
 
     <div id="select-mode" class="flex gap-6">
-      <button
-        type="button"
+      <a
+        href="/"
         id="explorer"
         class="flex items-center gap-2 text-purple-light font-nunito bg-gray-300 px-3 py-2 rounded-md cursor-pointer">
         <img
@@ -43,9 +43,9 @@ require 'dados.php';
           alt=""
           class="w-[20px]">
         Explorer
-      </button>
-      <button
-        type="button"
+      </a>
+      <a
+        href="my-films.php"
         id="my-films"
         class="flex items-center gap-2 text-gray-500 font-nunito px-3 py-2 rounded-md cursor-pointer">
         <img
@@ -53,7 +53,7 @@ require 'dados.php';
           alt=""
           class="w-[20px]">
         Meus filmes
-      </button>
+      </a>
     </div>
 
     <div class="flex items-center gap-3">

@@ -1,3 +1,11 @@
+<?php
+
+require 'dados.php';
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -26,8 +34,8 @@
       class="w-[45px]">
 
     <div id="select-mode" class="flex gap-6">
-      <button
-        type="button"
+      <a
+        href="/"
         id="explorer"
         class="flex items-center gap-2 text-purple-light font-nunito bg-gray-300 px-3 py-2 rounded-md cursor-pointer">
         <img
@@ -35,9 +43,9 @@
           alt=""
           class="w-[20px]">
         Explorer
-      </button>
-      <button
-        type="button"
+      </a>
+      <a
+        href="my-films.php"
         id="my-films"
         class="flex items-center gap-2 text-gray-500 font-nunito px-3 py-2 rounded-md cursor-pointer">
         <img
@@ -45,7 +53,7 @@
           alt=""
           class="w-[20px]">
         Meus filmes
-      </button>
+      </a>
     </div>
 
     <div class="flex items-center gap-3">
@@ -80,182 +88,37 @@
     </section>
 
     <!-- ### FILMS ### -->
+
+
     <section class="w-full flex flex-wrap gap-y-[24px] justify-between mt-6">
-      <a href="/details.php?">
-        <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-          <img
-            src="assets/Image/Films/pobres-criaturas.png"
-            alt=""
-            class="w-full h-full object-cover">
-          <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
+
+      <?php foreach ($films as $film): ?>
+        <a href="/details.php?id=<?= $film['id'] ?>">
+          <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
+            <img
+              src="assets/Image/Films/<?= $film['img'] ?>"
+              alt=""
+              class="w-full h-full object-cover">
+            <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
           bg-gradient-to-b from-transparent to-gray-900/90"></div>
 
-          <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-            <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-            /5
-            <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-          </div>
+            <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
+              <span class="text-xl leading-none font-[Rajdhani] font-bold"><?= $film['stars'] ?></span>
+              /5
+              <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
+            </div>
 
-          <figcaption class="absolute bottom-5 left-5">
-            <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Pobres Criaturas</h2>
-            <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Drama • 2023</p>
-          </figcaption>
-        </figure>
-      </a>
+            <figcaption class="absolute bottom-5 left-5">
+              <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">
+                <?= $film['title'] ?>
+              </h2>
+              <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]"><?= $film['gender'] ?> • <?= $film['year'] ?></p>
+            </figcaption>
+          </figure>
+        </a>
+      <?php endforeach; ?>
 
-      <a href="/details.php?">
-        <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-          <img
-            src="assets/Image/Films/meu-malvado.png"
-            alt=""
-            class="w-full h-full object-cover">
-          <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
-          bg-gradient-to-b from-transparent to-gray-900/90"></div>
 
-          <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-            <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-            /5
-            <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-          </div>
-
-          <figcaption class="absolute bottom-5 left-5">
-            <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Meu Malvado Favorito 4</h2>
-            <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Animação • 2024</p>
-          </figcaption>
-        </figure>
-      </a>
-
-      <a href="/details.php?">
-        <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-          <img
-            src="assets/Image/Films/deadpol-x-wolverine.png"
-            alt=""
-            class="w-full h-full object-cover">
-          <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
-          bg-gradient-to-b from-transparent to-gray-900/90"></div>
-
-          <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-            <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-            /5
-            <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-          </div>
-
-          <figcaption class="absolute bottom-5 left-5">
-            <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Deadpool & Wolverine</h2>
-            <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Ação • 2023</p>
-          </figcaption>
-        </figure>
-      </a>
-
-      <a href="/details.php?">
-        <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-          <img
-            src="assets/Image/Films/o-corvo.png"
-            alt=""
-            class="w-full h-full object-cover">
-          <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
-          bg-gradient-to-b from-transparent to-gray-900/90"></div>
-
-          <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-            <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-            /5
-            <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-          </div>
-
-          <figcaption class="absolute bottom-5 left-5">
-            <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">O Corvo</h2>
-            <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Fantasia • 2024</p>
-          </figcaption>
-        </figure>
-      </a>
-
-      <a href="/details.php?">
-        <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-          <img
-            src="assets/Image/Films/senhor-dos-aneis.png"
-            alt=""
-            class="w-full h-full object-cover">
-          <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
-          bg-gradient-to-b from-transparent to-gray-900/90"></div>
-
-          <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-            <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-            /5
-            <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-          </div>
-
-          <figcaption class="absolute bottom-5 left-5">
-            <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">O Senhor dos Anéis: A Sociedade do Anel</h2>
-            <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Aventura • 2001</p>
-          </figcaption>
-        </figure>
-      </a>
-
-      <a href="/details.php?">
-        <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-          <img
-            src="assets/Image/Films/alien.png"
-            alt=""
-            class="w-full h-full object-cover">
-          <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
-          bg-gradient-to-b from-transparent to-gray-900/90"></div>
-
-          <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-            <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-            /5
-            <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-          </div>
-
-          <figcaption class="absolute bottom-5 left-5">
-            <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Alien: Covenant</h2>
-            <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Horror • 2017</p>
-          </figcaption>
-        </figure>
-      </a>
-
-      <a href="/details.php?">
-        <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-          <img
-            src="assets/Image/Films/divertidamente.png"
-            alt=""
-            class="w-full h-full object-cover">
-          <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
-          bg-gradient-to-b from-transparent to-gray-900/90"></div>
-
-          <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-            <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-            /5
-            <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-          </div>
-
-          <figcaption class="absolute bottom-5 left-5">
-            <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Divertidamente 2</h2>
-            <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Animação • 2024</p>
-          </figcaption>
-        </figure>
-      </a>
-
-      <a href="/details.php?">
-        <figure class="card w-[280px] h-[360px] bg-red-500 rounded-2xl overflow-hidden relative">
-          <img
-            src="assets/Image/Films/mad-max.png"
-            alt=""
-            class="w-full h-full object-cover">
-          <div class="shadow absolute bottom-0 left-0 w-full h-[100px] 
-          bg-gradient-to-b from-transparent to-gray-900/90"></div>
-
-          <div class="absolute top-5 right-5 flex text-[#E4E5EC] text-xs items-baseline bg-[#0f0f1a]/80 px-[10px] py-[6px] rounded-full leading-none">
-            <span class="text-xl leading-none font-[Rajdhani] font-bold">4,5</span>
-            /5
-            <img src="assets/Icon/Star-Fill.svg" alt="" class="w-4 ml-[6px]">
-          </div>
-
-          <figcaption class="absolute bottom-5 left-5">
-            <h2 class="text-xl text-[#E4E5EC] font-[Rajdhani] font-bold">Mad Max: Estrada da Fúria</h2>
-            <p class="font-[Nunito_Sans] text-sm text-[#B5B6C9]">Ação • 2015</p>
-          </figcaption>
-        </figure>
-      </a>
 
     </section>
 
